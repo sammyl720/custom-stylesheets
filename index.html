@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Custom Styles</title>
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="row bg-dark p-2">
+            <div class="col-6 offset-3 bg-success p-2 center-content column">
+                <p class="text-light">
+                    Welcome to My App
+                </p>
+            </div>
+        </div>
+        <div class="row  p-2 my-3">
+            <div class="card col-4 offset-1">
+                <div class="card-heading">
+                    Header
+                </div>
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis at iusto, non natus architecto amet ducimus praesentium voluptatibus quaerat! Nemo.
+                </div>
+                <div class="card-footer">
+                    <div class="right p-2">
+                        <button class="btn btn-lg btn-dark" data-color="dark">
+                        Read More
+                      </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-4 p-2 z-depth-2 offset-7" id="btn-card">
+                <p class="text-dark card-heading">Buttons</p>
+                <div class="card-body">
+                    <button class="btn btn-warning" data-color="warning">Warning</button>
+                    <button class="btn btn-danger" data-color="danger">Danger</button>
+                    <button class="btn btn-success" data-color="success">Success</button>
+                    <button class="btn btn-dark" data-color="dark">Dark</button>
+                    <button class="btn btn-info" data-color="info">Info</button>
+                    <button class="btn btn-light" data-color="light">Light</button>
+                    <button class="btn btn-primary" data-color="primary">Primary</button>
+                    <button class="btn btn-secondary" data-color="secondary">Secondary</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <main class="col-10 p-5 bg-dark text-light center-content column">
+                <h1>Main Area</h1>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, fuga.</p>
+                <p class="text-center">Minus laudantium sint blanditiis voluptatibus perspiciatis excepturi in, a nesciunt?</p>
+                <p class="text-center">Amet sed illo obcaecati consequuntur mollitia tempora sit. Architecto, magni.</p>
+                <p class="text-center">Natus id dignissimos odio nam maiores iusto molestiae nemo nostrum?</p>
+                <p class="text-center">Corporis, ullam. Consectetur quidem dolores dicta aspernatur aperiam, similique recusandae!</p>
+            </main>
+            <aside class="col-2 offset-10 bg-secondary p-2 text-light">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dignissimos voluptatum quibusdam architecto harum facere autem, in provident, illum quasi eius? Quasi similique earum quo perferendis cum, nobis provident unde ad? Aspernatur?
+            </aside>
+        </div>
+        <div class="row bg-success text-light p-3">
+            <p class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam velit nemo fugiat! Perspiciatis delectus ex doloremque! Quia nobis fugiat consequuntur in eos beatae harum saepe repellat repudiandae voluptate et obcaecati ipsum voluptatum, fugit
+                mollitia, earum similique? In amet placeat praesentium! Aperiam quis delectus consequuntur nesciunt minima voluptatem distinctio, explicabo voluptatum error cum alias quidem veniam placeat blanditiis impedit provident magnam.</p>
+        </div>
+        <div class="row">
+            <div class="col-10 offset-1 card rounded my-5 mx-3 z-depth-1">
+                <p class="card-body text-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum natus provident sint quos voluptatibus repudiandae, rerum fugit a aperiam rem nam architecto blanditiis eaque libero iusto distinctio corrupti doloremque assumenda.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btns = document.querySelectorAll('.btn')
+        const container = document.querySelector('.container')
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', () => {
+                container.classList = `container bg-${btns[i].dataset.color}`
+            })
+        }
+    </script>
+</body>
+
+</html>
