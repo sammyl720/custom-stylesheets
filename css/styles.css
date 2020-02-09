@@ -1067,6 +1067,7 @@
 }
 
 .card {
+  width: 100%;
   border: 1px solid rgba(55, 55, 55, 0.2);
   border-radius: 0.25rem;
   box-shadow: 13px 13px 2rem -1.8rem #555555;
@@ -1089,6 +1090,42 @@
   padding: 0.5rem;
   justify-self: end;
   border-top: 1px dotted rgba(0, 0, 0, 0.363);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+.form-group > label {
+  font-weight: 300;
+  margin-bottom: 0.25rem;
+}
+.form-group > .form-control {
+  flex: 1;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #98a8e5;
+  background: rgba(41, 199, 172, 0.1);
+}
+.form-group > .form-control:focus {
+  border: 3px solid #89e7d7;
+  background: rgba(41, 199, 172, 0.01);
+}
+
+.form-check {
+  display: flex;
+  margin: 0.5rem;
+  align-items: center;
+  justify-content: space-around;
+}
+.form-check > label {
+  font-weight: 300;
+  flex: 1;
+}
+.form-check > input[type=checkbox]:focus {
+  outline: invert blue;
 }
 
 /*# sourceMappingURL=styles.css.map */

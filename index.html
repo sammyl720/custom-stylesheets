@@ -8,7 +8,7 @@
     <title>Custom Styles</title>
 </head>
 
-<body class="bg-light">
+<body class="bg-dark">
     <div class="container">
         <div class="row bg-dark p-2">
             <div class="col-6 offset-3 col-sm-10 offset-sm-1 bg-success p-2 center-content column">
@@ -48,7 +48,32 @@
             </div>
         </div>
         <div class="row">
-            <main class="col-10 p-5 bg-dark col-sm-12 text-light center-content column">
+            <div class="col-sm-12 col-6 offset-3 my-2 card">
+                <div class="card-heading">
+                    <h1 class="text-center">Form</h1>
+                </div>
+                <form id='form' class="card-body">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id='name' class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select type="text" id='gender' class="form-control select">
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="single" value='single'>
+                        <label for="single">Single</label>
+                    </div>
+                    <button type="submit" class="btn btn-secondary right">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <main class="col-10 m-1 p-5 bg-dark col-sm-12 text-light center-content column">
                 <h1>Main Area</h1>
                 <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, fuga.</p>
                 <p class="text-center">Minus laudantium sint blanditiis voluptatibus perspiciatis excepturi in, a nesciunt?</p>
@@ -56,12 +81,10 @@
                 <p class="text-center">Natus id dignissimos odio nam maiores iusto molestiae nemo nostrum?</p>
                 <p class="text-center">Corporis, ullam. Consectetur quidem dolores dicta aspernatur aperiam, similique recusandae!</p>
             </main>
-            <aside class="col-2 offset-10 bg-secondary col-sm-12 p-2 text-light">
+            <aside class="col-2 offset-10 bg-secondary col-sm-12 p-2 m-1 text-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dignissimos voluptatum quibusdam architecto harum facere autem, in provident, illum quasi eius? Quasi similique earum quo perferendis cum, nobis provident unde ad? Aspernatur?
             </aside>
-        </div>
-        <div class="row bg-success text-light p-3">
-            <p class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam velit nemo fugiat! Perspiciatis delectus ex doloremque! Quia nobis fugiat consequuntur in eos beatae harum saepe repellat repudiandae voluptate et obcaecati ipsum voluptatum, fugit
+            <p class="col-12 bg-success text-light p-3  m-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam velit nemo fugiat! Perspiciatis delectus ex doloremque! Quia nobis fugiat consequuntur in eos beatae harum saepe repellat repudiandae voluptate et obcaecati ipsum voluptatum, fugit
                 mollitia, earum similique? In amet placeat praesentium! Aperiam quis delectus consequuntur nesciunt minima voluptatem distinctio, explicabo voluptatum error cum alias quidem veniam placeat blanditiis impedit provident magnam.</p>
         </div>
         <footer class="row">
@@ -71,6 +94,7 @@
         </footer>
     </div>
     <script>
+        const form = document.getElementById('form')
         const btns = document.querySelectorAll('.btn')
         const container = document.querySelector('.container')
         for (let i = 0; i < btns.length; i++) {
@@ -78,6 +102,11 @@
                 container.classList = `container bg-${btns[i].dataset.color}`
             })
         }
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            const response = `Name: ${form['name'].value}\nGender: ${form['gender'].value}\nSingle: ${form['single'].checked}`
+            alert(response)
+        })
     </script>
 </body>
 
