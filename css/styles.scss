@@ -8,7 +8,7 @@ $danger: #ce0f3d;
 $dark: #333333;
 $light: #f1f9f9;
 // sizes
-$smartphone: 400pc;
+$smartphone: 400pt;
 * {
     margin: 0;
     padding: 0;
@@ -96,7 +96,7 @@ $offset) {
 
 @mixin sizing-small-screen($size,
 $offset) {
-    @media screen and (max-width: 399pc) {
+    @media screen and (max-width: 399pt) {
         grid-column: ($offset+1)slash()($size+1+$offset);
     }
 }
